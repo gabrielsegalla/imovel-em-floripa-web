@@ -1,0 +1,31 @@
+export const FLORIANOPOLIS_NEIGHBORHOODS = [
+  "Centro",
+  "Trindade",
+  "Agronomica",
+  "Itacorubi",
+  "Santa Monica",
+  "Cacupé",
+  "Joao Paulo",
+  "Saco Grande",
+  "Lagoa da Conceicao",
+  "Rio Tavares",
+  "Campeche",
+  "Morro das Pedras",
+  "Armacao",
+  "Pântano do Sul",
+  "Ribeirao da Ilha",
+  "Carianos",
+  "Pantanal",
+  "Coqueiros",
+  "Ingleses",
+  "Canasvieiras",
+  "Jurere",
+  "Jurere Internacional",
+  "Santo Antonio de Lisboa",
+  "Daniela",
+  "Barra da Lagoa",
+  "Córrego Grande",
+] as const;
+
+export const PROPERTY_TYPES = ["House", "Apartment", "SPE"] as const;
+export const PROPERTY_STATUSES = ["Sale", "Rent"] as const;
