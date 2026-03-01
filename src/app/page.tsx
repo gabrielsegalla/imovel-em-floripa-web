@@ -8,7 +8,7 @@ import { getLatestProperties } from "@/server/services/property-service";
 import { serializeProperties } from "@/server/services/property-serializer";
 
 export const metadata: Metadata = {
-  title: "Find your ideal property in Florianópolis",
+  title: "Imóvel em Floripa",
   description:
     "Explore premium houses, apartments, and SPE investments in Florianópolis with advanced real estate search.",
 };

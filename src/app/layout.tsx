@@ -15,7 +15,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Imóvel em Floripa | Real Estate in Florianópolis",
+    default: "Imóvel em Floripa | Logo Oficial",
     template: "%s | Imóvel em Floripa",
   },
   description:
@@ -29,6 +29,11 @@ export const metadata: Metadata = {
     description: "Find your ideal property in Florianópolis.",
     type: "website",
     locale: "pt_BR",
+  },
+  icons: {
+    icon: [{ url: "/logo.png", type: "image/png" }],
+    shortcut: ["/logo.png"],
+    apple: [{ url: "/logo.png" }],
   },
 };
 
