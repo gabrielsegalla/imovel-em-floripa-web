@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 
+import { isAdminAuthenticatedRequest } from "@/lib/auth/admin-session";
 import { propertyInputSchema, propertyQuerySchema } from "@/lib/validators/property";
 import { createNewProperty, getProperties } from "@/server/services/property-service";
 import { serializeProperties, serializeProperty } from "@/server/services/property-serializer";
+
+export const runtime = "nodejs";
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
   const queryObject = Object.fromEntries(request.nextUrl.searchParams.entries());
@@ -25,6 +28,10 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 }
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
+  if (!isAdminAuthenticatedRequest(request)) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const body = await request.json();
   const validation = propertyInputSchema.safeParse(body);
 
